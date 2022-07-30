@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streaks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div id="plusIcon"><ion-icon name="add-circle-outline"></ion-icon></div>
+        <div class="phoneDisplay">
+            <div class="right1">
+                <div id="phone">
+                  <img
+                    src="https://streaksapp.com/images/demo2-with-watch.png"
+                    alt=""
+                  />
+                </div>
+                <div class="welcome"><h1>Welcome to My Streak Counter</h1></div>
+              </div>
+        </div>
+        <div class="formDisplay">
+            <div class="right2">
+                <div class="bars">
+                  <ion-icon class="barsIcon" name="list-outline"></ion-icon><br />
+                  Add a Todo Here
+                </div>
+                <form  id="form" action="">
+                  <div class="heading"><h3>Please Add A Task</h3></div>
+                  <div class="taskArea">
+                    Task Name<br />
+                    <input id="taskInput" type="text" />
+                  </div>
+                  <div class="imageArea">
+                    Image<br />
+                    <input id="imageInput" type="text" />
+                  </div>
+                  <div class="dateArea">
+                    Start Date<br />
+                    <input id="dateInput" type="date" />
+                  </div>
+                  <div class="addTask">
+                    <input id="addTaskBtn" type="submit" value="Add Task" />
+                  </div>
+                </form>
+              </div>
+        </div>
+       
+        
+      </div>
+      <div class="bottom">
+        
+        <div id="streaksList">
+
+          <!-- <div class="aStreak">
+            <div class="streakImage">
+              <ion-icon class="bike" name="bicycle-outline"></ion-icon>
+            </div>
+            <div class="streakDate">12/12/2012</div>
+            <div class="streakText">Cycling</div>
+          </div>
+          <div class="aStreak">
+            <div class="streakImage">
+              <ion-icon class="bike" name="bicycle-outline"></ion-icon>
+            </div>
+            <div class="streakDate">12/12/2012</div>
+            <div class="streakText">Cycling</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="/dest/app.js"></script>
+  </body>
+</html>

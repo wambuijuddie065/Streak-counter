@@ -1,0 +1,164 @@
+.container {
+
+
+    height: fit-content;
+    margin: 10px auto;
+    width: auto;
+}
+
+.top {
+    background-color: #FF704C;
+    display: flex;
+    align-items: center;
+    height: 450px;
+}
+
+#plusIcon {
+    font-size: 75px;
+    color: white;
+    margin-left: 90px;
+        
+}
+.rotated{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#phone {
+    margin-left: 100px;
+}
+
+#phone img {
+    /* height: 10%; */
+    /* width: 50%; */
+    height: 420px;
+    width: 300px;
+
+
+}
+
+.phoneDisplay {
+    display: block;
+
+}
+
+.formDisplay {
+    display: none;
+
+}
+
+.right1 {
+
+
+    display: flex;
+    align-items: center;
+
+}
+
+.right2 {
+    display: flex;
+    margin-left: 400px;
+}
+
+.bars {
+
+    color: white;
+    padding: 25px;
+    margin-right: 200px;
+}
+
+.barsIcon {
+    font-size: 80px;
+}
+
+.welcome {
+
+    color: white;
+    margin-left: 40px;
+
+}
+
+#form {
+
+    background-color: white;
+    color: #FF704C;
+    border: none;
+    outline: none;
+    /* border: 2px solid white; */
+    width: 400px;
+    height: 450px;
+    font-size: 25px;
+    padding: 5px;
+}
+
+#form .heading {
+    color: white;
+    background-color: #FF704C;
+    height: 65px;
+    font-size: 20px;
+    padding: 8px;
+
+
+
+}
+
+.heading h3 {
+    padding: 4px;
+}
+
+#imageInput,
+#dateInput,
+#taskInput {
+    height: 30px;
+    width: 390px;
+    margin-top: 10px;
+    border: solid 1px grey;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.taskArea,
+.imageArea,
+.dateArea {
+    margin-top: 10px;
+}
+
+#addTaskBtn {
+    height: 50px;
+    width: 390px;
+    color: white;
+    background-color: #FF704C;
+    border: none;
+    margin-top: 8px;
+    font-size: 25px;
+}
+
+.bottom {
+    height: 600px;
+}
+
+#activity {
+    text-align: center;
+    margin-top: 10rem;
+    color: black;
+}
+
+#streaksList {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.aStreak {
+    border: solid 1px #FF704C;
+    height: 150px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.streakImage{
+    color: #1E90FF;
+    font-size: 90px;
+}
