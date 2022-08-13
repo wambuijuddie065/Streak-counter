@@ -4,24 +4,24 @@ const imageInput = document.querySelector("#imageInput");
 const dateInput = document.querySelector("#dateInput");
 const addTaskBtn = document.querySelector("#addTaskBtn");
 const plusIcon = document.querySelector("#plusIcon");
+const closeIcon = document.querySelector("#closeIcon");
 const form = document.querySelector("#form");
 const phoneDisplay = document.querySelector(".phoneDisplay");
 const formDisplay = document.querySelector(".formDisplay");
 const streaksList = document.querySelector("#streaksList");
 plusIcon.addEventListener("click", () => {
-    myFunction();
+    myFunctionPlus();
 });
-function myFunction() {
-    if (formDisplay.style.display == "none" && phoneDisplay.style.display == "block") {
-        formDisplay.style.display = "block";
-        phoneDisplay.style.display = "none";
-        plusIcon.setAttribute("class", "rotated");
-    }
-    else {
-        phoneDisplay.style.display = "block";
-        formDisplay.style.display = "none";
-        plusIcon.removeAttribute("class");
-    }
+closeIcon.addEventListener("click", () => {
+    myFunctionClose();
+});
+function myFunctionPlus() {
+    formDisplay.style.display = "block";
+    phoneDisplay.style.display = "none";
+}
+function myFunctionClose() {
+    phoneDisplay.style.display = "block";
+    formDisplay.style.display = "none";
 }
 export class Streaks {
     constructor() {
@@ -52,6 +52,4 @@ form.addEventListener("submit", (e) => {
     streak.addStreak(streakItem);
     form.reset();
     streaksList.innerHTML = render(streak.getstreaksArr());
-    myFunction();
-    // 
 });

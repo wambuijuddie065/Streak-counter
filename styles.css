@@ -12,17 +12,22 @@
     align-items: center;
     height: 450px;
 }
+#plusIcon{
+    margin-left: 90px;
 
-#plusIcon {
+}
+
+#plusIcon , #closeIcon {
     font-size: 75px;
     color: white;
-    margin-left: 90px;
+   
         
 }
-.rotated{
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+#closeIcon {
+    margin-top: 150px;
+    margin-right: 180px;
 }
+
 
 #phone {
     margin-left: 100px;
@@ -84,7 +89,7 @@
     color: #FF704C;
     border: none;
     outline: none;
-    /* border: 2px solid white; */
+   
     width: 400px;
     height: 450px;
     font-size: 25px;
@@ -161,4 +166,47 @@
 .streakImage{
     color: #1E90FF;
     font-size: 90px;
+}
+.popUp{
+    
+    height: 280px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    right: 40%;
+    left: 26.5%;
+    bottom: 27%;
+    padding-top: 20px;
+   
+    
+}
+.icon, .days , .description, .date, .actions{
+    padding-top: 5px;
+}
+.icon{
+    color: #1E90FF;
+    font-size: 100px;
+}
+.middle{
+    display: none;
+}
+.actions{
+    display: flex;
+    gap: 15px;
+}
+#closeBtn, #deleteBtn{
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+}
+#closeBtn{
+    background-color: red;
+    
+}
+#deleteBtn{
+    background-color: gray;
 }
