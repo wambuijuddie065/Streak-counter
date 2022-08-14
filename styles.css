@@ -96,20 +96,22 @@
     padding: 5px;
 }
 
-#form .heading {
+#form .heading  {
     color: white;
     background-color: #FF704C;
-    height: 65px;
-    font-size: 20px;
-    padding: 8px;
-
-
-
+    height: 50px;
+    font-size: 18px;
+    padding: 5px;
+}
+.topH{
+    color: red;
+    height: auto;
+    font-size: 15px;
+    font-weight: bolder;
+    display: none;
 }
 
-.heading h3 {
-    padding: 4px;
-}
+
 
 #imageInput,
 #dateInput,
@@ -140,6 +142,12 @@
 
 .bottom {
     height: 600px;
+}
+#activityDesc{
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin: 20px;
 }
 
 #activity {
@@ -190,9 +198,9 @@
     color: #1E90FF;
     font-size: 100px;
 }
-.middle{
+/* #middle{
     display: none;
-}
+} */
 .actions{
     display: flex;
     gap: 15px;
