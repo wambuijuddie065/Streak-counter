@@ -67,32 +67,35 @@ class Streaks{
             streaksList.innerHTML='';
           
                 this.streaksArr.map((streak:streakInterface,id)=>{
-                let html=`
-                
-                    <div class="aStreak">
-                      <div class="streakImage">${streak.icon}</div>
-                      <div class="streakDate">${streak.date}</div>
-                      <div class="streakText">${streak.taskName}</div>
-                    </div>
-            
-                `
-                streaksList.insertAdjacentHTML('beforeend', html)
+          
+                const aStreak = document.createElement('div')
+                aStreak.classList.add('aStreak')
+                const streakImage = document.createElement('h1')
+                streakImage.classList.add('streakImage')
+                const streakDate = document.createElement('p')
+                streakDate.classList.add('streakDate')
+                const streakText = document.createElement('p')
+                streakText.classList.add('streakText')
 
-                for (let i = 0; i < streaksList.children.length; i++)
-                streaksList.children[i].addEventListener('click', (e) =>{
-                    e.preventDefault()
-                    this.displayModal(i);
-                    const closeBtn = document.querySelector("#closeBtn") as HTMLButtonElement
-                    closeBtn.onclick = () => {
-                        middle.style.display = 'none';
-                    }
-                    const deleteBtn = document.querySelector("#deleteBtn") as HTMLButtonElement
-                    deleteBtn.onclick = () => {
-                        this.deleteStreak(id)
-                        middle.style.display = 'none';
-                    }
+
+                streakImage.innerHTML=`${streak.icon}`
+                streakDate.textContent=`${streak.date}`
+                streakText.textContent=`${streak.taskName}`
+
+                aStreak.appendChild(streakImage);
+                aStreak.appendChild(streakDate);
+                aStreak.appendChild(streakText);
+                streaksList.appendChild(aStreak);
+
+                
+
+                
+                aStreak.addEventListener('click', () =>{
+                    this.displayModal(id);
+             
                         
                 })
+                aStreak.removeEventListener('click', () =>{});
 
             })
                
@@ -100,8 +103,11 @@ class Streaks{
     }
     displayModal(index:number){
         
+       console.log(index);
        
         const onePop=this.streaksArr[index]
+        
+        
         let todaysDate = new Date();
         let date = new Date(onePop.date);
         let strkStart = todaysDate.getTime();
@@ -112,7 +118,9 @@ class Streaks{
         <div class="popUp">
         <div class="icon">${onePop.icon}</div>
         <div class="date">${onePop.date}</div>
-        <div class="description">${onePop.taskName}</div>
+        <div class="desc">${onePop.taskName}</div>
+       
+        
         <div class="days">${diff} days</div>
         <div class="actions">
           <div class="btn1">
@@ -124,7 +132,19 @@ class Streaks{
         </div>
       </div>
         `
-        middle.insertAdjacentHTML('beforeend', modal)
+        middle.innerHTML=modal
+        const closeBtn = document.querySelector("#closeBtn") as HTMLButtonElement
+        const parent =closeBtn.parentElement?.parentElement?.parentElement?.parentElement as HTMLElement;
+        closeBtn.addEventListener('click', () =>{                     
+            middle.innerHTML=''
+        })
+        const deleteBtn = document.querySelector("#deleteBtn") as HTMLButtonElement
+        deleteBtn.addEventListener('click', () => {
+            this.deleteStreak(index)
+            middle.innerHTML=''
+            
+            
+        })
 
     }
    
